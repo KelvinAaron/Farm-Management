@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-21 15:36:25.814798",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_info_tab",
+  "name1",
+  "animal_type",
+  "tag_number",
+  "breed",
+  "sex",
+  "internal_id",
+  "group",
+  "status",
+  "location",
+  "electronic_id",
+  "registry_number",
+  "tatoo_at_left",
+  "tatoo_at_right",
+  "parent1",
+  "yield",
+  "physical_characteristics_tab",
+  "color",
+  "description",
+  "breeding_stock",
+  "weight",
+  "height",
+  "width",
+  "framescore",
+  "condition_score",
+  "wellness_score",
+  "last_measured_on",
+  "birth_info_tab",
+  "date_of_birth",
+  "paternity",
+  "maternity",
+  "birth_weight",
+  "age_to_wean",
+  "date_weaned",
+  "additional_info_tab",
+  "method_acquired",
+  "veterinarian",
+  "measure_in_harvest",
+  "expected_maturity_date",
+  "estimated_value",
+  "general_ledger_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "animal_type",
+   "fieldtype": "Link",
+   "label": "Animal Type",
+   "options": "Dosmestic Animal"
+  },
+  {
+   "fieldname": "tag_number",
+   "fieldtype": "Data",
+   "label": "Tag Number"
+  },
+  {
+   "fieldname": "physical_characteristics_tab",
+   "fieldtype": "Tab Break",
+   "label": "Physical Characteristics"
+  },
+  {
+   "fieldname": "birth_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Birth Info"
+  },
+  {
+   "fieldname": "additional_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Additional Info"
+  },
+  {
+   "fieldname": "breed",
+   "fieldtype": "Data",
+   "label": "Breed"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Select",
+   "label": "Sex",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "internal_id",
+   "fieldtype": "Data",
+   "label": "Internal ID"
+  },
+  {
+   "fieldname": "group",
+   "fieldtype": "Data",
+   "label": "Group"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "electronic_id",
+   "fieldtype": "Data",
+   "label": "Electronic ID"
+  },
+  {
+   "fieldname": "registry_number",
+   "fieldtype": "Data",
+   "label": "Registry Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "tatoo_at_left",
+   "fieldtype": "Check",
+   "label": "Tatoo at left"
+  },
+  {
+   "default": "0",
+   "fieldname": "tatoo_at_right",
+   "fieldtype": "Check",
+   "label": "Tatoo at right"
+  },
+  {
+   "fieldname": "parent1",
+   "fieldtype": "Data",
+   "label": "Parent"
+  },
+  {
+   "fieldname": "yield",
+   "fieldtype": "Data",
+   "label": "Yield"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "breeding_stock",
+   "fieldtype": "Select",
+   "label": "Breeding Stock",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "label": "Width"
+  },
+  {
+   "fieldname": "framescore",
+   "fieldtype": "Float",
+   "label": "Framescore"
+  },
+  {
+   "fieldname": "condition_score",
+   "fieldtype": "Float",
+   "label": "Condition score"
+  },
+  {
+   "fieldname": "wellness_score",
+   "fieldtype": "Float",
+   "label": "Wellness score"
+  },
+  {
+   "fieldname": "last_measured_on",
+   "fieldtype": "Date",
+   "label": "Last Measured on"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "paternity",
+   "fieldtype": "Data",
+   "label": "Paternity"
+  },
+  {
+   "fieldname": "maternity",
+   "fieldtype": "Data",
+   "label": "Maternity"
+  },
+  {
+   "fieldname": "birth_weight",
+   "fieldtype": "Float",
+   "label": "Birth Weight"
+  },
+  {
+   "fieldname": "age_to_wean",
+   "fieldtype": "Float",
+   "label": "Age to Wean"
+  },
+  {
+   "fieldname": "date_weaned",
+   "fieldtype": "Date",
+   "label": "Date Weaned"
+  },
+  {
+   "fieldname": "method_acquired",
+   "fieldtype": "Select",
+   "label": "Method Acquired",
+   "options": "\nBirth\nPurchased\nDonation"
+  },
+  {
+   "fieldname": "veterinarian",
+   "fieldtype": "Link",
+   "label": "Veterinarian",
+   "options": "veterinary"
+  },
+  {
+   "fieldname": "measure_in_harvest",
+   "fieldtype": "Float",
+   "label": "Measure in Harvest"
+  },
+  {
+   "fieldname": "expected_maturity_date",
+   "fieldtype": "Date",
+   "label": "Expected Maturity Date"
+  },
+  {
+   "fieldname": "estimated_value",
+   "fieldtype": "Currency",
+   "label": "Estimated Value"
+  },
+  {
+   "fieldname": "general_ledger_account",
+   "fieldtype": "Data",
+   "label": "General Ledger Account"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-21 17:35:35.823364",
+ "modified_by": "Administrator",
+ "module": "Farm Management",
+ "name": "Livestock",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -39,7 +39,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-21 15:29:07.430559",
+ "modified": "2025-04-21 16:30:59.904233",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "veterinary",
@@ -59,7 +59,7 @@
    "write": 1
   }
  ],
- "row_format": "Dynamic",
+ "search_fields": "name1",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

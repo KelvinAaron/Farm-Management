@@ -1,41 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name_of_product",
- "creation": "2025-04-21 14:44:21.197419",
+ "creation": "2025-04-21 16:19:31.024594",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name_of_product",
-  "quantity",
-  "unit_price"
+  "warehouse_name"
  ],
  "fields": [
   {
-   "fieldname": "name_of_product",
+   "fieldname": "warehouse_name",
    "fieldtype": "Data",
-   "label": "Name of Product",
-   "unique": 1
-  },
-  {
-   "fieldname": "quantity",
-   "fieldtype": "Int",
-   "label": "Quantity"
-  },
-  {
-   "fieldname": "unit_price",
-   "fieldtype": "Currency",
-   "label": "Unit Price"
+   "label": "Warehouse Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-21 17:54:56.688276",
+ "modified": "2025-04-21 16:20:50.148939",
  "modified_by": "Administrator",
  "module": "Farm Management",
- "name": "Inventory",
- "naming_rule": "By fieldname",
+ "name": "Farm Warehouse",
  "owner": "Administrator",
  "permissions": [
   {

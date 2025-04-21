@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-21 16:45:29.336527",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "livestock_id",
+  "section_break_jmhe",
+  "date_of_assessment",
+  "appetite_level",
+  "water_consumption",
+  "ease_of_handling",
+  "mobility",
+  "stress_level",
+  "energy_level",
+  "sociability",
+  "strength",
+  "amended_from",
+  "section_break_jmnb",
+  "cleanliness",
+  "body_condition",
+  "eyes",
+  "ear",
+  "nose",
+  "mouth",
+  "teeth",
+  "feet_hooves",
+  "internal_section",
+  "hearth_health",
+  "lung_health",
+  "gastrointestinal",
+  "urogenital",
+  "section_break_jmpo",
+  "follow_up"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_jmhe",
+   "fieldtype": "Section Break",
+   "label": "Overall"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Health Assessment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date_of_assessment",
+   "fieldtype": "Date",
+   "label": "Date of Assessment"
+  },
+  {
+   "fieldname": "appetite_level",
+   "fieldtype": "Select",
+   "label": "Appetite Level",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "water_consumption",
+   "fieldtype": "Select",
+   "label": "Water Consumption",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "ease_of_handling",
+   "fieldtype": "Select",
+   "label": "Ease of Handling",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "mobility",
+   "fieldtype": "Select",
+   "label": "Mobility",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "stress_level",
+   "fieldtype": "Select",
+   "label": "Stress Level",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "energy_level",
+   "fieldtype": "Select",
+   "label": "Energy Level",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "sociability",
+   "fieldtype": "Select",
+   "label": "Sociability",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "strength",
+   "fieldtype": "Select",
+   "label": "Strength",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_jmnb",
+   "fieldtype": "Section Break",
+   "label": "External"
+  },
+  {
+   "fieldname": "cleanliness",
+   "fieldtype": "Select",
+   "label": "Cleanliness",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "body_condition",
+   "fieldtype": "Select",
+   "label": "Body Condition",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "eyes",
+   "fieldtype": "Select",
+   "label": "Eyes",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "ear",
+   "fieldtype": "Select",
+   "label": "Ear",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "nose",
+   "fieldtype": "Select",
+   "label": "Nose",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "mouth",
+   "fieldtype": "Select",
+   "label": "Mouth",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "teeth",
+   "fieldtype": "Select",
+   "label": "Teeth",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "feet_hooves",
+   "fieldtype": "Select",
+   "label": "Feet/ Hooves",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "internal_section",
+   "fieldtype": "Section Break",
+   "label": "Internal"
+  },
+  {
+   "fieldname": "hearth_health",
+   "fieldtype": "Select",
+   "label": "Hearth Health",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "lung_health",
+   "fieldtype": "Select",
+   "label": "Lung Health",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "gastrointestinal",
+   "fieldtype": "Select",
+   "label": "Gastrointestinal",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "urogenital",
+   "fieldtype": "Select",
+   "label": "Urogenital",
+   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+  },
+  {
+   "fieldname": "section_break_jmpo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up",
+   "fieldtype": "Check",
+   "label": "Flag For Follow-up"
+  },
+  {
+   "fieldname": "livestock_id",
+   "fieldtype": "Link",
+   "label": "Livestock ID",
+   "options": "Livestock"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-21 17:38:40.225926",
+ "modified_by": "Administrator",
+ "module": "Farm Management",
+ "name": "Health Assessment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

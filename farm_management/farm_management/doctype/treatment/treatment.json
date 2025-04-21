@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-21 16:06:48.700864",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "animal_id",
+  "treatment_date",
+  "warehouse",
+  "treatment_type",
+  "product_details",
+  "unit_price",
+  "quantity",
+  "cost",
+  "uom",
+  "application_method",
+  "withdrawal_date",
+  "veterinarian",
+  "treatment_location",
+  "next_treatment_date",
+  "description",
+  "general_ledger",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "treatment_date",
+   "fieldtype": "Date",
+   "label": "Treatment Date"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Farm Warehouse"
+  },
+  {
+   "fieldname": "treatment_type",
+   "fieldtype": "Data",
+   "label": "Treatment Type"
+  },
+  {
+   "fieldname": "product_details",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Inventory"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "label": "UOM"
+  },
+  {
+   "fieldname": "application_method",
+   "fieldtype": "Data",
+   "label": "Application Method"
+  },
+  {
+   "fieldname": "withdrawal_date",
+   "fieldtype": "Date",
+   "label": "Withdrawal Date"
+  },
+  {
+   "fetch_from": "veterinarian.place_of_operation",
+   "fieldname": "treatment_location",
+   "fieldtype": "Data",
+   "label": "Treatment Location"
+  },
+  {
+   "fieldname": "veterinarian",
+   "fieldtype": "Link",
+   "label": "Veterinarian",
+   "options": "veterinary"
+  },
+  {
+   "fieldname": "next_treatment_date",
+   "fieldtype": "Date",
+   "label": "Next Treatment Date"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "general_ledger",
+   "fieldtype": "Data",
+   "label": "General Ledger"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Treatment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "animal_id",
+   "fieldtype": "Link",
+   "label": "Animal ID",
+   "options": "Livestock"
+  },
+  {
+   "fetch_from": "product_details.unit_price",
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "label": "Unit price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-21 17:54:02.017763",
+ "modified_by": "Administrator",
+ "module": "Farm Management",
+ "name": "Treatment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
