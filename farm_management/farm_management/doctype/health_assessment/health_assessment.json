@@ -9,27 +9,33 @@
   "section_break_jmhe",
   "date_of_assessment",
   "appetite_level",
-  "water_consumption",
+  "sociability",
+  "amended_from",
+  "column_break_kozx",
   "ease_of_handling",
+  "water_consumption",
+  "energy_level",
+  "column_break_tigm",
   "mobility",
   "stress_level",
-  "energy_level",
-  "sociability",
   "strength",
-  "amended_from",
   "section_break_jmnb",
   "cleanliness",
   "body_condition",
-  "eyes",
-  "ear",
-  "nose",
   "mouth",
-  "teeth",
+  "column_break_drad",
+  "nose",
   "feet_hooves",
+  "ear",
+  "column_break_rteh",
+  "teeth",
+  "eyes",
   "internal_section",
   "hearth_health",
-  "lung_health",
   "gastrointestinal",
+  "column_break_yfbb",
+  "lung_health",
+  "column_break_mtgd",
   "urogenital",
   "section_break_jmpo",
   "follow_up"
@@ -203,13 +209,37 @@
    "fieldtype": "Link",
    "label": "Livestock ID",
    "options": "Livestock"
+  },
+  {
+   "fieldname": "column_break_kozx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tigm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_drad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rteh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yfbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mtgd",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-21 17:38:40.225926",
+ "modified": "2025-04-22 17:06:09.052993",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Health Assessment",

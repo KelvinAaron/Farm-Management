@@ -9,13 +9,15 @@
   "animal_id",
   "measurement_date",
   "weight",
+  "amended_from",
+  "column_break_zvjs",
   "height",
   "width",
   "temperature",
+  "column_break_jgsq",
   "condition_score",
-  "famacha",
   "fecal_egg_count",
-  "amended_from"
+  "famacha"
  ],
  "fields": [
   {
@@ -77,13 +79,21 @@
    "fieldname": "fecal_egg_count",
    "fieldtype": "Float",
    "label": "Fecal Egg Count"
+  },
+  {
+   "fieldname": "column_break_zvjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jgsq",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-21 17:36:38.225671",
+ "modified": "2025-04-22 17:07:48.303566",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Measurement",

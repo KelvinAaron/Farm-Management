@@ -8,11 +8,12 @@
   "section_break_thon",
   "animal_id",
   "feeding_date",
+  "column_break_xfpy",
   "product",
-  "unit_price",
   "quantity",
-  "cost",
+  "column_break_plil",
   "uom",
+  "cost",
   "amended_from"
  ],
  "fields": [
@@ -39,7 +40,7 @@
    "fieldname": "product",
    "fieldtype": "Link",
    "label": "Product",
-   "options": "Inventory"
+   "options": "Item"
   },
   {
    "fieldname": "quantity",
@@ -48,34 +49,36 @@
   },
   {
    "fieldname": "uom",
-   "fieldtype": "Data",
-   "label": "UOM"
-  },
-  {
-   "fieldname": "cost",
-   "fieldtype": "Currency",
-   "label": "Cost",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "product.unit_price",
-   "fieldname": "unit_price",
-   "fieldtype": "Currency",
-   "label": "Unit Price",
-   "read_only": 1
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM Category"
   },
   {
    "fieldname": "animal_id",
    "fieldtype": "Link",
    "label": "Animal ID",
    "options": "Livestock"
+  },
+  {
+   "fieldname": "column_break_xfpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_plil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-21 17:53:15.696129",
+ "modified": "2025-04-22 17:11:52.158693",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Feedings",

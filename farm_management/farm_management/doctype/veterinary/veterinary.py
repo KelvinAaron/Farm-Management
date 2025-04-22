@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class veterinary(Document):
+class Veterinary(Document):
 	pass

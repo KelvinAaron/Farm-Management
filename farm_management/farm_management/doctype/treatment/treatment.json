@@ -6,22 +6,23 @@
  "engine": "InnoDB",
  "field_order": [
   "animal_id",
-  "treatment_date",
-  "warehouse",
-  "treatment_type",
-  "product_details",
-  "unit_price",
-  "quantity",
-  "cost",
-  "uom",
-  "application_method",
-  "withdrawal_date",
   "veterinarian",
+  "treatment_date",
   "treatment_location",
+  "withdrawal_date",
+  "column_break_bwpq",
+  "treatment_type",
+  "application_method",
+  "warehouse",
   "next_treatment_date",
-  "description",
+  "amended_from",
+  "column_break_hqtm",
+  "product_details",
+  "quantity",
+  "uom",
   "general_ledger",
-  "amended_from"
+  "section_break_wued",
+  "description"
  ],
  "fields": [
   {
@@ -33,7 +34,7 @@
    "fieldname": "warehouse",
    "fieldtype": "Link",
    "label": "Warehouse",
-   "options": "Farm Warehouse"
+   "options": "Warehouse"
   },
   {
    "fieldname": "treatment_type",
@@ -44,7 +45,7 @@
    "fieldname": "product_details",
    "fieldtype": "Link",
    "label": "Product",
-   "options": "Inventory"
+   "options": "Item"
   },
   {
    "fieldname": "quantity",
@@ -53,8 +54,9 @@
   },
   {
    "fieldname": "uom",
-   "fieldtype": "Data",
-   "label": "UOM"
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM Category"
   },
   {
    "fieldname": "application_method",
@@ -76,7 +78,7 @@
    "fieldname": "veterinarian",
    "fieldtype": "Link",
    "label": "Veterinarian",
-   "options": "veterinary"
+   "options": "Veterinary"
   },
   {
    "fieldname": "next_treatment_date",
@@ -110,24 +112,23 @@
    "options": "Livestock"
   },
   {
-   "fetch_from": "product_details.unit_price",
-   "fieldname": "unit_price",
-   "fieldtype": "Currency",
-   "label": "Unit price",
-   "read_only": 1
+   "fieldname": "column_break_bwpq",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "cost",
-   "fieldtype": "Currency",
-   "label": "Cost",
-   "read_only": 1
+   "fieldname": "column_break_hqtm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wued",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-21 17:54:02.017763",
+ "modified": "2025-04-22 17:11:34.061890",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Treatment",

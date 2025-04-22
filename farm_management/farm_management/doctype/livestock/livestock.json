@@ -8,42 +8,51 @@
   "basic_info_tab",
   "name1",
   "animal_type",
-  "tag_number",
   "breed",
   "sex",
-  "internal_id",
   "group",
-  "status",
-  "location",
-  "electronic_id",
-  "registry_number",
   "tatoo_at_left",
   "tatoo_at_right",
+  "column_break_kpxm",
+  "internal_id",
+  "tag_number",
+  "electronic_id",
+  "registry_number",
+  "column_break_tqsx",
+  "status",
+  "location",
   "parent1",
   "yield",
   "physical_characteristics_tab",
   "color",
-  "description",
   "breeding_stock",
-  "weight",
   "height",
+  "column_break_atdy",
+  "weight",
   "width",
+  "wellness_score",
+  "column_break_jlsn",
   "framescore",
   "condition_score",
-  "wellness_score",
   "last_measured_on",
+  "section_break_tudr",
+  "description",
   "birth_info_tab",
   "date_of_birth",
+  "birth_weight",
+  "column_break_pxfd",
   "paternity",
   "maternity",
-  "birth_weight",
+  "column_break_jnax",
   "age_to_wean",
   "date_weaned",
   "additional_info_tab",
   "method_acquired",
   "veterinarian",
+  "column_break_qrbo",
   "measure_in_harvest",
   "expected_maturity_date",
+  "column_break_icby",
   "estimated_value",
   "general_ledger_account"
  ],
@@ -145,7 +154,7 @@
   },
   {
    "fieldname": "yield",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Yield"
   },
   {
@@ -239,12 +248,13 @@
    "fieldname": "veterinarian",
    "fieldtype": "Link",
    "label": "Veterinarian",
-   "options": "veterinary"
+   "options": "Veterinary"
   },
   {
    "fieldname": "measure_in_harvest",
-   "fieldtype": "Float",
-   "label": "Measure in Harvest"
+   "fieldtype": "Link",
+   "label": "Measure in Harvest",
+   "options": "UOM"
   },
   {
    "fieldname": "expected_maturity_date",
@@ -260,12 +270,48 @@
    "fieldname": "general_ledger_account",
    "fieldtype": "Data",
    "label": "General Ledger Account"
+  },
+  {
+   "fieldname": "column_break_jlsn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_atdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tudr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kpxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tqsx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pxfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jnax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qrbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_icby",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-21 17:35:35.823364",
+ "modified": "2025-04-22 16:46:59.881236",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock",

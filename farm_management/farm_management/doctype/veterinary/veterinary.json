@@ -8,6 +8,7 @@
  "field_order": [
   "name1",
   "id",
+  "column_break_nzij",
   "animal_group",
   "place_of_operation"
  ],
@@ -34,15 +35,19 @@
    "fieldname": "place_of_operation",
    "fieldtype": "Data",
    "label": "Place of Operation"
+  },
+  {
+   "fieldname": "column_break_nzij",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-21 16:30:59.904233",
+ "modified": "2025-04-22 16:47:16.587695",
  "modified_by": "Administrator",
  "module": "Farm Management",
- "name": "veterinary",
+ "name": "Veterinary",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

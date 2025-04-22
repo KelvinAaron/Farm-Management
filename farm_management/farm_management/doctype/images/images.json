@@ -6,11 +6,13 @@
  "engine": "InnoDB",
  "field_order": [
   "animal_id",
+  "section_break_bend",
   "image_1",
-  "image_2",
   "image_3",
-  "image_4",
-  "image_5"
+  "image_5",
+  "column_break_oqwa",
+  "image_2",
+  "image_4"
  ],
  "fields": [
   {
@@ -43,12 +45,20 @@
    "fieldtype": "Link",
    "label": "Animal ID",
    "options": "Livestock"
+  },
+  {
+   "fieldname": "section_break_bend",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_oqwa",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-21 17:36:36.848820",
+ "modified": "2025-04-22 17:08:51.444469",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Images",
