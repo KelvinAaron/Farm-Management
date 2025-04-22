@@ -38,8 +38,9 @@
   },
   {
    "fieldname": "treatment_type",
-   "fieldtype": "Data",
-   "label": "Treatment Type"
+   "fieldtype": "Link",
+   "label": "Treatment Type",
+   "options": "Treatment Type"
   },
   {
    "fieldname": "product_details",
@@ -60,8 +61,9 @@
   },
   {
    "fieldname": "application_method",
-   "fieldtype": "Data",
-   "label": "Application Method"
+   "fieldtype": "Link",
+   "label": "Application Method",
+   "options": "Application Method"
   },
   {
    "fieldname": "withdrawal_date",
@@ -128,7 +130,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 17:16:03.666346",
+ "modified": "2025-04-22 17:25:42.702815",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Treatment",
