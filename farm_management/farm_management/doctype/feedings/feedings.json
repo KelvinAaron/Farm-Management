@@ -51,7 +51,7 @@
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
-   "options": "UOM Category"
+   "options": "UOM"
   },
   {
    "fieldname": "animal_id",
@@ -78,7 +78,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 17:11:52.158693",
+ "modified": "2025-04-22 17:16:00.040398",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Feedings",
