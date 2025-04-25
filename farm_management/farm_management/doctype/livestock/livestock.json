@@ -65,13 +65,16 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name"
   },
   {
    "fieldname": "animal_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Animal Type",
-   "options": "Dosmestic Animal"
+   "options": "Domestic Animal",
+   "reqd": 1
   },
   {
    "fieldname": "tag_number",
@@ -95,8 +98,9 @@
   },
   {
    "fieldname": "breed",
-   "fieldtype": "Data",
-   "label": "Breed"
+   "fieldtype": "Link",
+   "label": "Breed",
+   "options": "Breed"
   },
   {
    "fieldname": "sex",
@@ -311,7 +315,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-22 16:46:59.881236",
+ "modified": "2025-04-25 09:43:43.946216",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock",
@@ -330,6 +334,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

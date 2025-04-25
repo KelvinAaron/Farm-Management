@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestDosmesticAnimal(FrappeTestCase):
+class TestBreed(FrappeTestCase):
 	pass

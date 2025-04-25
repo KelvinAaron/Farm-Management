@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class DosmesticAnimal(Document):
+class DomesticAnimal(Document):
 	pass
