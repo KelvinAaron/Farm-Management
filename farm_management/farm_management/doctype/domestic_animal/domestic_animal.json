@@ -6,8 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "animal_type",
-  "breed"
+  "animal_type"
  ],
  "fields": [
   {
@@ -17,21 +16,15 @@
    "label": "Animal Type",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "breed",
-   "fieldtype": "Table",
-   "label": "Breed",
-   "options": "Breed"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-21 14:49:32.743064",
+ "modified": "2025-04-25 09:12:59.323682",
  "modified_by": "Administrator",
  "module": "Farm Management",
- "name": "Dosmestic Animal",
+ "name": "Domestic Animal",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -48,6 +41,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
