@@ -1,67 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:IMG-{####}",
  "creation": "2025-04-21 17:05:06.335313",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "animal_id",
-  "section_break_bend",
-  "image_1",
-  "image_3",
-  "image_5",
-  "column_break_oqwa",
-  "image_2",
-  "image_4"
+  "image"
  ],
  "fields": [
   {
-   "fieldname": "image_1",
-   "fieldtype": "Attach Image",
-   "label": "Image 1"
-  },
-  {
-   "fieldname": "image_2",
-   "fieldtype": "Attach Image",
-   "label": "Image 2"
-  },
-  {
-   "fieldname": "image_3",
-   "fieldtype": "Attach Image",
-   "label": "Image 3"
-  },
-  {
-   "fieldname": "image_4",
-   "fieldtype": "Attach Image",
-   "label": "Image 4"
-  },
-  {
-   "fieldname": "image_5",
-   "fieldtype": "Attach Image",
-   "label": "Image 5"
-  },
-  {
    "fieldname": "animal_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Animal ID",
-   "options": "Livestock"
+   "options": "Livestock",
+   "reqd": 1
   },
   {
-   "fieldname": "section_break_bend",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_oqwa",
-   "fieldtype": "Column Break"
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-22 17:08:51.444469",
+ "modified": "2025-04-26 17:48:13.575335",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Images",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

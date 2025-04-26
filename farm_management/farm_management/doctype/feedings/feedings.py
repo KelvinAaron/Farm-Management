@@ -6,7 +6,7 @@ from frappe.model.document import Document
 
 
 class Feedings(Document):
-	def after_insert(self):
+	def on_submit(self):
 		stock = frappe.get_doc(
 			{
 				"doctype": "Stock Entry",
@@ -21,4 +21,15 @@ class Feedings(Document):
 			}
 		)
 		stock.insert()
-		frappe.msgprint(f"Stock with id: {stock.name}, has been created")
+		frappe.msgprint(f"Stock entry with id: {stock.name}, has been created")
+
+		livestock = frappe.get_doc(
+			"Livestock", self.animal_id
+		)
+		livestock.append("feedings",
+			{
+				"feeding_id": self.name,  
+			},
+		)
+		livestock.save()
+		frappe.msgprint(f"Livestock with id: {livestock.name}, has been updated")

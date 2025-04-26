@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:MSM-{####}",
  "creation": "2025-04-21 16:38:59.231917",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -37,8 +38,10 @@
   {
    "fieldname": "animal_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Animal ID",
-   "options": "Livestock"
+   "options": "Livestock",
+   "reqd": 1
   },
   {
    "fieldname": "measurement_date",
@@ -93,10 +96,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 17:07:48.303566",
+ "modified": "2025-04-26 15:55:27.134144",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Measurement",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

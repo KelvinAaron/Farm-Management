@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:application_method",
  "creation": "2025-04-22 17:24:39.596474",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,16 +12,18 @@
   {
    "fieldname": "application_method",
    "fieldtype": "Data",
-   "label": "Application Method"
+   "label": "Application Method",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-22 17:24:53.978933",
+ "modified": "2025-04-26 17:04:41.613949",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Application Method",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:LS-{####}",
  "creation": "2025-04-21 15:36:25.814798",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -54,7 +55,15 @@
   "expected_maturity_date",
   "column_break_icby",
   "estimated_value",
-  "general_ledger_account"
+  "general_ledger_account",
+  "vet",
+  "treatments",
+  "measurement_tab",
+  "measurements",
+  "feeding_tab",
+  "feedings",
+  "image_tab",
+  "images"
  ],
  "fields": [
   {
@@ -310,15 +319,70 @@
   {
    "fieldname": "column_break_icby",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vet",
+   "fieldtype": "Tab Break",
+   "label": "Treatment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "measurement_tab",
+   "fieldtype": "Tab Break",
+   "label": "Measurement",
+   "read_only": 1
+  },
+  {
+   "fieldname": "feeding_tab",
+   "fieldtype": "Tab Break",
+   "label": "Feeding",
+   "read_only": 1
+  },
+  {
+   "fieldname": "image_tab",
+   "fieldtype": "Tab Break",
+   "label": "Image",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "measurements",
+   "fieldtype": "Table",
+   "label": "Measurements",
+   "options": "Livestock Measurement",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "feedings",
+   "fieldtype": "Table",
+   "label": "Feedings",
+   "options": "Livestock Feeding",
+   "read_only": 1
+  },
+  {
+   "fieldname": "treatments",
+   "fieldtype": "Table",
+   "label": "Treatments",
+   "options": "Livestock Treatment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "label": "Images",
+   "options": "Livestock Image",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-25 09:43:43.946216",
+ "modified": "2025-04-26 18:06:13.687165",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -334,7 +398,6 @@
    "write": 1
   }
  ],
- "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

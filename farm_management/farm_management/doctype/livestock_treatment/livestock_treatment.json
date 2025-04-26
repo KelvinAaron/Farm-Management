@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-26 15:24:47.712362",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "treatment_id",
+  "veterinarian",
+  "treatment_date",
+  "treatment_location",
+  "withdrawal_date",
+  "column_break_ymwo",
+  "treatment_type",
+  "warehouse",
+  "application_method",
+  "next_treatment_date",
+  "column_break_mpcz",
+  "product",
+  "quantity",
+  "uom",
+  "general_ledger",
+  "section_break_akdr",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "treatment_id",
+   "fieldtype": "Link",
+   "label": "Treatment ID",
+   "options": "Treatment",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.veterinarian",
+   "fieldname": "veterinarian",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Veterinarian",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.treatment_date",
+   "fieldname": "treatment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Treatment Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.treatment_location",
+   "fieldname": "treatment_location",
+   "fieldtype": "Data",
+   "label": "Treatment Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.withdrawal_date",
+   "fieldname": "withdrawal_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Withdrawal Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.treatment_type",
+   "fieldname": "treatment_type",
+   "fieldtype": "Data",
+   "label": "Treatment Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.application_method",
+   "fieldname": "application_method",
+   "fieldtype": "Data",
+   "label": "Application Method",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.warehouse",
+   "fieldname": "warehouse",
+   "fieldtype": "Data",
+   "label": "Warehouse",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.next_treatment_date",
+   "fieldname": "next_treatment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Treatment Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.product_details",
+   "fieldname": "product",
+   "fieldtype": "Data",
+   "label": "Product",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.quantity",
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "label": "UOM",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.general_ledger",
+   "fieldname": "general_ledger",
+   "fieldtype": "Data",
+   "label": "General Ledger",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ymwo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mpcz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_akdr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "treatment_id.description",
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-26 18:01:49.270411",
+ "modified_by": "Administrator",
+ "module": "Farm Management",
+ "name": "Livestock Treatment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

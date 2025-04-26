@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:FD-{####}",
  "creation": "2025-04-21 16:32:59.791075",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -56,8 +57,10 @@
   {
    "fieldname": "animal_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Animal ID",
-   "options": "Livestock"
+   "options": "Livestock",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_xfpy",
@@ -78,10 +81,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 17:16:00.040398",
+ "modified": "2025-04-26 17:13:43.611983",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Feedings",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

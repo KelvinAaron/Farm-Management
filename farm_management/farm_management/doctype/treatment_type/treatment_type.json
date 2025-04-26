@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:treatment_type",
  "creation": "2025-04-22 17:21:20.930752",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,16 +12,18 @@
   {
    "fieldname": "treatment_type",
    "fieldtype": "Data",
-   "label": "Treatment Type"
+   "label": "Treatment Type",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-22 17:23:42.176123",
+ "modified": "2025-04-26 17:02:05.872412",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Treatment Type",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

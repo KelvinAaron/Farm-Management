@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:TRM-{####}",
  "creation": "2025-04-21 16:06:48.700864",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -74,7 +75,8 @@
    "fetch_from": "veterinarian.place_of_operation",
    "fieldname": "treatment_location",
    "fieldtype": "Data",
-   "label": "Treatment Location"
+   "label": "Treatment Location",
+   "read_only": 1
   },
   {
    "fieldname": "veterinarian",
@@ -110,8 +112,10 @@
   {
    "fieldname": "animal_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Animal ID",
-   "options": "Livestock"
+   "options": "Livestock",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_bwpq",
@@ -130,10 +134,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 17:25:42.702815",
+ "modified": "2025-04-26 17:13:51.891681",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Treatment",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
