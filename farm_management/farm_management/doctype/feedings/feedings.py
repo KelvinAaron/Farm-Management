@@ -20,7 +20,7 @@ class Feedings(Document):
 				]
 			}
 		)
-		stock.insert()
+		stock.insert().submit()
 		frappe.msgprint(f"Stock entry with id: {stock.name}, has been created")
 
 		livestock = frappe.get_doc(
