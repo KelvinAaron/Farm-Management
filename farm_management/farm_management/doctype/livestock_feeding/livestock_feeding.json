@@ -8,6 +8,7 @@
  "field_order": [
   "feeding_id",
   "feeding_date",
+  "warehouse",
   "column_break_ztfl",
   "product",
   "quantity",
@@ -70,13 +71,19 @@
   {
    "fieldname": "column_break_iqsu",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "feeding_id.warehouse",
+   "fieldname": "warehouse",
+   "fieldtype": "Data",
+   "label": "Warehouse"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-26 18:00:09.146877",
+ "modified": "2025-04-28 16:26:52.010025",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock Feeding",

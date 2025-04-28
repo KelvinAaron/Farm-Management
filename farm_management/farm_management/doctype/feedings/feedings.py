@@ -13,7 +13,7 @@ class Feedings(Document):
 				"stock_entry_type": "Material Issue",
 				"items": [
 					{
-						"s_warehouse": "Finished Goods - E",
+						"s_warehouse": self.warehouse,
                         "item_code": self.product,
                         "qty": self.quantity,
 					}

@@ -9,6 +9,7 @@
   "section_break_thon",
   "animal_id",
   "feeding_date",
+  "warehouse",
   "column_break_xfpy",
   "product",
   "quantity",
@@ -75,13 +76,19 @@
    "fieldtype": "Currency",
    "label": "Cost",
    "read_only": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-26 17:13:43.611983",
+ "modified": "2025-04-28 16:25:44.953074",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Feedings",
