@@ -35,7 +35,8 @@
    "fieldname": "warehouse",
    "fieldtype": "Link",
    "label": "Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
   },
   {
    "fieldname": "treatment_type",
@@ -47,12 +48,14 @@
    "fieldname": "product_details",
    "fieldtype": "Link",
    "label": "Product",
-   "options": "Item"
+   "options": "Item",
+   "reqd": 1
   },
   {
    "fieldname": "quantity",
    "fieldtype": "Float",
-   "label": "Quantity"
+   "label": "Quantity",
+   "reqd": 1
   },
   {
    "fieldname": "uom",
@@ -134,7 +137,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-26 17:13:51.891681",
+ "modified": "2025-04-29 13:14:10.657905",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Treatment",
@@ -154,6 +157,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
