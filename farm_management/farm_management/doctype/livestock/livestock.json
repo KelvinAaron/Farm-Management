@@ -1,24 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:LS-{####}",
+ "autoname": "field:registry_number",
  "creation": "2025-04-21 15:36:25.814798",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "basic_info_tab",
+  "registry_number",
   "name1",
+  "value",
   "animal_type",
   "breed",
-  "sex",
-  "group",
   "tatoo_at_left",
   "tatoo_at_right",
   "column_break_kpxm",
+  "group",
+  "sex",
   "internal_id",
   "tag_number",
   "electronic_id",
-  "registry_number",
   "column_break_tqsx",
   "status",
   "location",
@@ -54,7 +55,6 @@
   "measure_in_harvest",
   "expected_maturity_date",
   "column_break_icby",
-  "estimated_value",
   "general_ledger_account",
   "vet",
   "treatments",
@@ -75,7 +75,8 @@
    "fieldname": "name1",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name"
+   "label": "Name",
+   "reqd": 1
   },
   {
    "fieldname": "animal_type",
@@ -124,14 +125,15 @@
   },
   {
    "fieldname": "group",
-   "fieldtype": "Data",
-   "label": "Group"
+   "fieldtype": "Link",
+   "label": "Group",
+   "options": "Item Group"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nExcellent\nGood\nOkay\nFair\nPoor"
+   "options": "Active\nDead\nSold"
   },
   {
    "fieldname": "location",
@@ -146,7 +148,9 @@
   {
    "fieldname": "registry_number",
    "fieldtype": "Data",
-   "label": "Registry Number"
+   "label": "Registry Number",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "default": "0",
@@ -275,11 +279,6 @@
    "label": "Expected Maturity Date"
   },
   {
-   "fieldname": "estimated_value",
-   "fieldtype": "Currency",
-   "label": "Estimated Value"
-  },
-  {
    "fieldname": "general_ledger_account",
    "fieldtype": "Data",
    "label": "General Ledger Account"
@@ -373,16 +372,22 @@
    "label": "Images",
    "options": "Livestock Image",
    "read_only": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Currency",
+   "label": "Valuation Rate",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-26 18:06:13.687165",
+ "modified": "2025-05-03 15:05:36.241151",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
