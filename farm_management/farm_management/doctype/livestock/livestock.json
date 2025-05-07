@@ -133,7 +133,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nDead\nSold"
+   "options": "Active\nDead\nSold",
+   "read_only": 1
   },
   {
    "fieldname": "location",
@@ -383,7 +384,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-03 15:05:36.241151",
+ "modified": "2025-05-06 11:05:31.350104",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock",
