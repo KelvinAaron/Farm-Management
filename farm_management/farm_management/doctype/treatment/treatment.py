@@ -7,6 +7,20 @@ from frappe.model.document import Document
 
 class Treatment(Document):
     def on_submit(self):
+        # Gets the available quantity for product in warehouse, and
+        # makes sure treatment quantity is not greater.
+        item_bin = frappe.db.get_value(
+            "Bin",
+            {
+                "item_code": self.product_details,
+                "warehouse": self.warehouse,
+            },
+            ["name", "actual_qty"],
+            as_dict=True
+        )
+        if item_bin.actual_qty < self.quantity:
+            frappe.throw(f"Max quantity: {item_bin.actual_qty}")
+
         stock = frappe.get_doc(
             {
                 "doctype": "Stock Entry",
@@ -23,10 +37,9 @@ class Treatment(Document):
         stock.insert().submit()
         frappe.msgprint(f"Stock entry with id: {stock.name}, has been created")
 
-        livestock = frappe.get_doc(
-            "Livestock", self.animal_id
-        )
-        livestock.append("treatments",
+        livestock = frappe.get_doc("Livestock", self.animal_id)
+        livestock.append(
+            "treatments",
             {
                 "treatment_id": self.name,
             },
