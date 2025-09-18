@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-12 22:47:56.109517",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yvta",
+  "livestock_id",
+  "activity",
+  "column_break_qjtr",
+  "date_of_action",
+  "valuation_rate",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yvta",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Livestock Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "livestock_id",
+   "fieldtype": "Link",
+   "label": "Livestock ID",
+   "options": "Livestock"
+  },
+  {
+   "fetch_from": "livestock_id.value",
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Valuation Rate"
+  },
+  {
+   "fieldname": "column_break_qjtr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_action",
+   "fieldtype": "Datetime",
+   "label": "Date of action"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "label": "Activity"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-12 22:50:23.649828",
+ "modified_by": "Administrator",
+ "module": "Farm Management",
+ "name": "Livestock Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

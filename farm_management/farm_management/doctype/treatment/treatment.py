@@ -6,6 +6,9 @@ from frappe.model.document import Document
 
 
 class Treatment(Document):
+    def before_save(self):
+        self.total_cost = self.quantity * self.valuation_rate
+
     def on_submit(self):
         stock = frappe.get_doc(
             {
@@ -23,9 +26,7 @@ class Treatment(Document):
         stock.insert().submit()
         frappe.msgprint(f"Stock entry with id: {stock.name}, has been created")
 
-        livestock = frappe.get_doc(
-            "Livestock", self.animal_id
-        )
+        livestock = frappe.get_doc("Livestock", self.animal_id)
         livestock.append("treatments",
             {
                 "treatment_id": self.name,

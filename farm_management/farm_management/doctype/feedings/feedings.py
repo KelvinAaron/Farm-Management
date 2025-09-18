@@ -6,6 +6,9 @@ from frappe.model.document import Document
 
 
 class Feedings(Document):
+	def before_save(self):
+		self.total_cost = self.quantity * self.valuation_rate
+
 	def on_submit(self):
 		stock = frappe.get_doc(
 			{

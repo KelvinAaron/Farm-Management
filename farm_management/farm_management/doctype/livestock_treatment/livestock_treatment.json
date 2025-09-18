@@ -16,11 +16,12 @@
   "warehouse",
   "application_method",
   "next_treatment_date",
+  "uom",
   "column_break_mpcz",
   "product",
   "quantity",
-  "uom",
-  "general_ledger",
+  "valuation_rate",
+  "cost",
   "section_break_akdr",
   "description"
  ],
@@ -44,7 +45,6 @@
    "fetch_from": "treatment_id.treatment_date",
    "fieldname": "treatment_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Treatment Date",
    "read_only": 1
   },
@@ -59,7 +59,6 @@
    "fetch_from": "treatment_id.withdrawal_date",
    "fieldname": "withdrawal_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Withdrawal Date",
    "read_only": 1
   },
@@ -88,7 +87,6 @@
    "fetch_from": "treatment_id.next_treatment_date",
    "fieldname": "next_treatment_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Next Treatment Date",
    "read_only": 1
   },
@@ -96,6 +94,7 @@
    "fetch_from": "treatment_id.product_details",
    "fieldname": "product",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Product",
    "read_only": 1
   },
@@ -103,6 +102,7 @@
    "fetch_from": "treatment_id.quantity",
    "fieldname": "quantity",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "label": "Quantity",
    "read_only": 1
   },
@@ -111,13 +111,6 @@
    "fieldname": "uom",
    "fieldtype": "Data",
    "label": "UOM",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "treatment_id.general_ledger",
-   "fieldname": "general_ledger",
-   "fieldtype": "Data",
-   "label": "General Ledger",
    "read_only": 1
   },
   {
@@ -137,13 +130,29 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
+  },
+  {
+   "fetch_from": "treatment_id.valuation_rate",
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Valuation Rate",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "treatment_id.total_cost",
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-26 18:01:49.270411",
+ "modified": "2025-09-13 17:42:53.684815",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock Treatment",

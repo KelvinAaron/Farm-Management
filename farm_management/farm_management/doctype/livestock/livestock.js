@@ -2,30 +2,73 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Livestock", {
-    refresh(frm) {
-        frm.set_value("group", "Animal")
-        frm.toggle_enable("group", false)
-
+    refresh(frm) {   
         frm.toggle_enable("breed", frm.doc.animal_type);
         if (frm.doc.status == "Active") {
-            frm.add_custom_button('Terminate', () => {
+            frm.add_custom_button('Activity', () => {
                 frappe.prompt(
-                    {
-                        label: 'Reason for Termination',
-                        fieldname: 'reason',
-                        fieldtype: 'Select',
-                        options: ['Sold', 'Dead'],
-                        reqd: 1
-                    }
-                    ,
+                    [
+                        {
+                            label: 'Reason for Termination',
+                            fieldname: 'reason',
+                            fieldtype: 'Select',
+                            options: ['Sold', 'Dead', 'Missing', 'Slaughtered'],
+                            reqd: 1
+                        },
+                        {
+                            label: 'Customer',
+                            fieldname: 'customer',
+                            fieldtype: 'Link',
+                            options: 'Customer', 
+                            depends_on: 'eval:doc.reason == "Sold"',
+                            mandatory_depends_on: 'eval:doc.reason == "Sold"'
+                        },
+                        {
+                            label: 'Debit To',
+                            fieldname: 'debit_to',
+                            fieldtype: 'Link',
+                            options: 'Account',
+                            depends_on: 'eval:doc.reason == "Sold"',
+                            mandatory_depends_on: 'eval:doc.reason == "Sold"',
+                            get_query: () => {
+                                return {
+                                    filters: {
+                                        account_type: 'Receivable', 
+                                        is_group: 0              
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            label: 'Income Account',
+                            fieldname: 'income_account',
+                            fieldtype: 'Link',
+                            options: 'Account',
+                            depends_on: 'eval:doc.reason == "Sold"',
+                            mandatory_depends_on: 'eval:doc.reason == "Sold"',
+                            get_query: () => {
+                                return {
+                                    filters: {
+                                        disabled: 0,
+                                        is_group: 0                  
+                                    }
+                                }
+                            }
+                        }
+                    ],
                     (values) => {
                         console.log(values.reason)
                         frappe.confirm(
-                            `Are you sure you want to terminate this livestock for reason: ${values.reason}?`,
+                            `Are you sure you want to save with reason: ${values.reason}?`,
                             () => {
-                                frm.call("terminate").then(r => {
-                                    frm.set_value("status", values.reason)
-                                    frm.save()
+                                frm.set_value("status", values.reason)
+                                frm.save().then(() => {
+                                    frm.call("sold", {
+                                        debit_to: values.debit_to,
+                                        customer: values.customer,
+                                        income_account: values.income_account,
+                                        reason: values.reason
+                                    });
                                 });
                             }
                         )

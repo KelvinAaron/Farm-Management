@@ -12,11 +12,12 @@
   "warehouse",
   "column_break_xfpy",
   "product",
+  "valuation_rate",
   "quantity",
   "column_break_plil",
   "uom",
-  "cost",
-  "amended_from"
+  "amended_from",
+  "total_cost"
  ],
  "fields": [
   {
@@ -36,18 +37,22 @@
   {
    "fieldname": "feeding_date",
    "fieldtype": "Date",
-   "label": "Feeding Date"
+   "label": "Feeding Date",
+   "reqd": 1
   },
   {
    "fieldname": "product",
    "fieldtype": "Link",
    "label": "Product",
-   "options": "Item"
+   "options": "Item",
+   "reqd": 1
   },
   {
    "fieldname": "quantity",
    "fieldtype": "Float",
-   "label": "Quantity"
+   "label": "Quantity",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "uom",
@@ -72,23 +77,31 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "cost",
-   "fieldtype": "Currency",
-   "label": "Cost",
-   "read_only": 1
-  },
-  {
    "fieldname": "warehouse",
    "fieldtype": "Link",
    "label": "Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product.valuation_rate",
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Valuation Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-28 16:25:44.953074",
+ "modified": "2025-09-13 17:52:56.089921",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Feedings",

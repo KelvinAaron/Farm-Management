@@ -11,6 +11,7 @@
   "warehouse",
   "column_break_ztfl",
   "product",
+  "valuation_rate",
   "quantity",
   "column_break_iqsu",
   "uom",
@@ -20,6 +21,7 @@
   {
    "fieldname": "feeding_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Feeding ID",
    "options": "Feedings",
    "read_only": 1
@@ -52,12 +54,11 @@
    "fetch_from": "feeding_id.uom",
    "fieldname": "uom",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "UOM",
    "read_only": 1
   },
   {
-   "fetch_from": "feeding_id.cost",
+   "fetch_from": "feeding_id.total_cost",
    "fieldname": "cost",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -76,14 +77,23 @@
    "fetch_from": "feeding_id.warehouse",
    "fieldname": "warehouse",
    "fieldtype": "Data",
-   "label": "Warehouse"
+   "label": "Warehouse",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "feeding_id.valuation_rate",
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Valuation Rate",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-28 16:26:52.010025",
+ "modified": "2025-09-13 17:47:51.494285",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock Feeding",

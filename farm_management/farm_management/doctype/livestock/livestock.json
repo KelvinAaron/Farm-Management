@@ -15,7 +15,6 @@
   "tatoo_at_left",
   "tatoo_at_right",
   "column_break_kpxm",
-  "group",
   "sex",
   "internal_id",
   "tag_number",
@@ -58,10 +57,12 @@
   "general_ledger_account",
   "vet",
   "treatments",
-  "measurement_tab",
-  "measurements",
+  "total_treatment_cost",
   "feeding_tab",
   "feedings",
+  "total_feeding_cost",
+  "measurement_tab",
+  "measurements",
   "image_tab",
   "images"
  ],
@@ -124,16 +125,10 @@
    "label": "Internal ID"
   },
   {
-   "fieldname": "group",
-   "fieldtype": "Link",
-   "label": "Group",
-   "options": "Item Group"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nDead\nSold",
+   "options": "Active\nSold\nDead\nMissing\nSlaughtered",
    "read_only": 1
   },
   {
@@ -189,7 +184,8 @@
    "fieldname": "breeding_stock",
    "fieldtype": "Select",
    "label": "Breeding Stock",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "weight",
@@ -379,12 +375,24 @@
    "fieldtype": "Currency",
    "label": "Valuation Rate",
    "reqd": 1
+  },
+  {
+   "fieldname": "total_treatment_cost",
+   "fieldtype": "Currency",
+   "label": "Total Treatment Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_feeding_cost",
+   "fieldtype": "Currency",
+   "label": "Total Feeding Cost",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-06 11:05:31.350104",
+ "modified": "2025-09-13 17:34:21.378252",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock",

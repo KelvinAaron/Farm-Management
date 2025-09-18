@@ -19,9 +19,10 @@
   "amended_from",
   "column_break_hqtm",
   "product_details",
+  "valuation_rate",
   "quantity",
   "uom",
-  "general_ledger",
+  "total_cost",
   "section_break_wued",
   "description"
  ],
@@ -29,13 +30,15 @@
   {
    "fieldname": "treatment_date",
    "fieldtype": "Date",
-   "label": "Treatment Date"
+   "label": "Treatment Date",
+   "reqd": 1
   },
   {
    "fieldname": "warehouse",
    "fieldtype": "Link",
    "label": "Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
   },
   {
    "fieldname": "treatment_type",
@@ -47,12 +50,15 @@
    "fieldname": "product_details",
    "fieldtype": "Link",
    "label": "Product",
-   "options": "Item"
+   "options": "Item",
+   "reqd": 1
   },
   {
    "fieldname": "quantity",
    "fieldtype": "Float",
-   "label": "Quantity"
+   "label": "Quantity",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "uom",
@@ -95,11 +101,6 @@
    "label": "Description"
   },
   {
-   "fieldname": "general_ledger",
-   "fieldtype": "Data",
-   "label": "General Ledger"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -128,13 +129,26 @@
   {
    "fieldname": "section_break_wued",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "product_details.valuation_rate",
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Valuation Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-26 17:13:51.891681",
+ "modified": "2025-09-13 17:52:46.037500",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Treatment",
