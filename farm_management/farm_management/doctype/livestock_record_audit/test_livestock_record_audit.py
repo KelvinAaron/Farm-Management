@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestFeedings(FrappeTestCase):
+class TestLivestockRecordAudit(FrappeTestCase):
 	pass

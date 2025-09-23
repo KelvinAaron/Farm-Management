@@ -4,6 +4,7 @@
 frappe.ui.form.on("Livestock", {
     refresh(frm) {   
         frm.toggle_enable("breed", frm.doc.animal_type);
+        frm.toggle_enable("animal_group", frm.doc.animal_type);
         if (frm.doc.status == "Active") {
             frm.add_custom_button('Activity', () => {
                 frappe.prompt(
@@ -93,5 +94,17 @@ frappe.ui.form.on("Livestock", {
         if (frm.doc.breed) {
             frm.set_value("breed", "")
         }
+
+        frm.toggle_enable("animal_group", frm.doc.animal_type);
+        if (frm.doc.animal_group) {
+            frm.set_value("animal_group", "")
+        }
+        frm.set_query("animal_group", () => {
+            return {
+                filters: {
+                    "animal_type": frm.doc.animal_type
+                }
+            }
+        })
     }
 });

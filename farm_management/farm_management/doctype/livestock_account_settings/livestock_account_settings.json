@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-20 16:00:33.166916",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "debit_account",
+  "treatment_debit_account",
+  "column_break_exbj",
+  "credit_account",
+  "feedings_debit_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "debit_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Debit Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "treatment_debit_account",
+   "fieldtype": "Link",
+   "label": "Treatment Debit Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_exbj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "credit_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Credit Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "feedings_debit_account",
+   "fieldtype": "Link",
+   "label": "Feedings Debit Account",
+   "options": "Account"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-09-20 16:45:46.880480",
+ "modified_by": "Administrator",
+ "module": "Farm Management",
+ "name": "Livestock Account Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

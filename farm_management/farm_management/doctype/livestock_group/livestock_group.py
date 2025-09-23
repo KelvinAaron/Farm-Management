@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class LivestockRecord(Document):
+class LivestockGroup(Document):
 	pass

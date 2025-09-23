@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestLivestockRecord(FrappeTestCase):
+class TestLivestockGroup(FrappeTestCase):
 	pass

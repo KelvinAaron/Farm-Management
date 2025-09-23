@@ -9,21 +9,25 @@
   "basic_info_tab",
   "registry_number",
   "name1",
-  "value",
   "animal_type",
+  "animal_group",
   "breed",
+  "parent1",
   "tatoo_at_left",
   "tatoo_at_right",
   "column_break_kpxm",
+  "status",
+  "location",
   "sex",
   "internal_id",
   "tag_number",
   "electronic_id",
   "column_break_tqsx",
-  "status",
-  "location",
-  "parent1",
-  "yield",
+  "date_of_acquire",
+  "value",
+  "total_treatment",
+  "total_feeding",
+  "closing_valuation_rate",
   "physical_characteristics_tab",
   "color",
   "breeding_stock",
@@ -59,8 +63,8 @@
   "treatments",
   "total_treatment_cost",
   "feeding_tab",
-  "feedings",
   "total_feeding_cost",
+  "feedings",
   "measurement_tab",
   "measurements",
   "image_tab",
@@ -132,6 +136,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "animal_group.location",
    "fieldname": "location",
    "fieldtype": "Data",
    "label": "Location"
@@ -166,11 +171,6 @@
    "label": "Parent"
   },
   {
-   "fieldname": "yield",
-   "fieldtype": "Int",
-   "label": "Yield"
-  },
-  {
    "fieldname": "color",
    "fieldtype": "Data",
    "label": "Color"
@@ -184,7 +184,7 @@
    "fieldname": "breeding_stock",
    "fieldtype": "Select",
    "label": "Breeding Stock",
-   "options": "\nYes\nNo",
+   "options": "Yes\nNo",
    "reqd": 1
   },
   {
@@ -373,7 +373,7 @@
   {
    "fieldname": "value",
    "fieldtype": "Currency",
-   "label": "Valuation Rate",
+   "label": "Opening Valuation Rate",
    "reqd": 1
   },
   {
@@ -387,12 +387,39 @@
    "fieldtype": "Currency",
    "label": "Total Feeding Cost",
    "read_only": 1
+  },
+  {
+   "fieldname": "closing_valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Closing Valuation Rate"
+  },
+  {
+   "fieldname": "total_treatment",
+   "fieldtype": "Currency",
+   "label": "Total Treatment Cost"
+  },
+  {
+   "fieldname": "total_feeding",
+   "fieldtype": "Currency",
+   "label": "Total Feeding Cost"
+  },
+  {
+   "fieldname": "date_of_acquire",
+   "fieldtype": "Date",
+   "label": "Date of Acquire",
+   "read_only": 1
+  },
+  {
+   "fieldname": "animal_group",
+   "fieldtype": "Link",
+   "label": "Animal Group",
+   "options": "Livestock Group"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-13 17:34:21.378252",
+ "modified": "2025-09-23 15:53:16.202913",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock",

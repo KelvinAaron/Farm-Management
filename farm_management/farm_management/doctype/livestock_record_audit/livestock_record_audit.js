@@ -1,7 +1,7 @@
 // Copyright (c) 2025, Group 2 and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Feedings", {
+// frappe.ui.form.on("Livestock Record Audit", {
 // 	refresh(frm) {
 
 // 	},

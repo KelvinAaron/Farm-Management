@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GRP-{animal_type}-{####}",
+ "creation": "2025-09-23 14:55:13.016993",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "animal_type",
+  "location",
+  "column_break_uqou",
+  "number_of_animals"
+ ],
+ "fields": [
+  {
+   "fieldname": "animal_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Animal Type",
+   "options": "Domestic Animal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_animals",
+   "fieldtype": "Int",
+   "label": "Number of Animals",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uqou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-23 15:52:56.538770",
+ "modified_by": "Administrator",
+ "module": "Farm Management",
+ "name": "Livestock Group",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

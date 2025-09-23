@@ -23,7 +23,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Feeding ID",
-   "options": "Feedings",
+   "options": "Feeding",
    "read_only": 1
   },
   {
@@ -93,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-13 17:47:51.494285",
+ "modified": "2025-09-20 16:40:48.153742",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Livestock Feeding",

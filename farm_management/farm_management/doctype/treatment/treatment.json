@@ -6,7 +6,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "entry_type",
   "animal_id",
+  "group_id",
   "veterinarian",
   "treatment_date",
   "treatment_location",
@@ -15,6 +17,7 @@
   "treatment_type",
   "application_method",
   "warehouse",
+  "treatment_account",
   "next_treatment_date",
   "amended_from",
   "column_break_hqtm",
@@ -30,12 +33,14 @@
   {
    "fieldname": "treatment_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Treatment Date",
    "reqd": 1
   },
   {
    "fieldname": "warehouse",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Warehouse",
    "options": "Warehouse",
    "reqd": 1
@@ -49,6 +54,7 @@
   {
    "fieldname": "product_details",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Product",
    "options": "Item",
    "reqd": 1
@@ -111,12 +117,12 @@
    "search_index": 1
   },
   {
+   "depends_on": "eval:doc.entry_type==\"Individual\"",
    "fieldname": "animal_id",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Animal ID",
-   "options": "Livestock",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.entry_type==\"Individual\"",
+   "options": "Livestock"
   },
   {
    "fieldname": "column_break_bwpq",
@@ -142,13 +148,35 @@
    "fieldtype": "Currency",
    "label": "Total Cost",
    "read_only": 1
+  },
+  {
+   "fieldname": "treatment_account",
+   "fieldtype": "Link",
+   "label": "Treatment Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Entry Type",
+   "options": "Individual\nGroup",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.entry_type==\"Group\"",
+   "fieldname": "group_id",
+   "fieldtype": "Link",
+   "label": "Group ID",
+   "mandatory_depends_on": "eval:doc.entry_type==\"Group\"",
+   "options": "Livestock Group"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-13 17:52:46.037500",
+ "modified": "2025-09-23 15:50:17.285149",
  "modified_by": "Administrator",
  "module": "Farm Management",
  "name": "Treatment",
