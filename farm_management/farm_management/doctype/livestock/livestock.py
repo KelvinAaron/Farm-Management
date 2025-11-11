@@ -68,9 +68,10 @@ class Livestock(Document):
 		})
 		stock_take.insert().submit()
 
-		animal_group = frappe.get_doc("Livestock Group", self.animal_group)
-		animal_group.number_of_animals -= 1
-		animal_group.save()
+		if self.animal_group:
+			animal_group = frappe.get_doc("Livestock Group", self.animal_group)
+			animal_group.number_of_animals -= 1
+			animal_group.save()
 
 		settings = frappe.get_doc("Livestock Account Settings")
 
